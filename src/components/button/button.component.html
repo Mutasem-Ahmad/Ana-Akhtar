@@ -1,0 +1,11 @@
+<button
+  [disabled]="disabled"
+  [type]="buttonType"
+  [class]="buttonClass"
+  [id]="id"
+  [name]="name"
+  (click)="onClick.emit($event)"
+>
+  <ng-content *ngIf="buttonClass === 'icons-button'"></ng-content>
+  <span>{{ text }}</span>
+</button>

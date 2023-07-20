@@ -1,0 +1,9 @@
+<div class="mb-4">
+  <p class="text-2xl font-light">Welcome to Ana Akhtar</p>
+  <p class="text-sm text-gray-400">Choose your platform</p>
+</div>
+<app-portal-card
+  class="lg:w-3/4 w-full overflow-hidden block"
+  *ngFor="let portal of portals"
+  [portal]="portal"
+/>
