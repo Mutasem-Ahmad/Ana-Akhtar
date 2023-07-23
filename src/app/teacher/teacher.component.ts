@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './teacher.component.html',
   styleUrls: ['./teacher.component.scss'],
 })
-export class TeacherComponent {}
+export class TeacherComponent {
+  open: boolean = false;
+}
