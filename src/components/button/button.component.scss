@@ -1,5 +1,5 @@
 button {
-  @apply py-6 px-6 font-semibold rounded-lg h-14 text-lg leading-3;
+  @apply py-6 px-10 font-semibold rounded-lg h-14 text-lg leading-3;
 }
 
 button:disabled {
@@ -7,7 +7,7 @@ button:disabled {
 }
 
 .filled-button {
-  @apply hover:bg-orange-500 text-white bg-orange-700;
+  @apply hover:bg-orange-500 text-white bg-primary;
 }
 
 .elevated-button {

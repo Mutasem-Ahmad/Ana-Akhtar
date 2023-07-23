@@ -1,1 +1,18 @@
-<p>input works!</p>
+<input
+  class="w-full h-14 border border-gray-300 p-4 outline-none rounded-md text-xl"
+  [class]="showError ? 'invalid:border-red-500' : ''"
+  [type]="type"
+  [id]="id"
+  [required]="required"
+  [disabled]="disabled"
+  [minlength]="minlength"
+  [name]="name"
+  [placeholder]="placeholder"
+  [(ngModel)]="innerValue"
+  (change)="setValue($event)"
+  (blur)="onTouched()"
+  (input)="setValue($event)"
+/>
+<div class="p-1 text-start text-red-500" *ngIf="showError">
+  {{ errors[0] }}
+</div>

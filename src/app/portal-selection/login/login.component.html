@@ -1,57 +1,63 @@
-<div class="relative">
-  <div class="absolute -left-16">
-    <svg
-      style="transform: rotate(270deg)"
-      fill="#000000"
-      width="40px"
-      height="40px"
-      viewBox="0 0 36 36"
-      version="1.1"
-      preserveAspectRatio="xMidYMid meet"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-    >
-      <title>arrow-line</title>
-      <path
-        d="M27.66,15.61,18,6,8.34,15.61A1,1,0,1,0,9.75,17L17,9.81V28.94a1,1,0,1,0,2,0V9.81L26.25,17a1,1,0,0,0,1.41-1.42Z"
-        class="clr-i-outline clr-i-outline-path-1"
-      ></path>
-      <rect x="0" y="0" width="36" height="36" fill-opacity="0" />
-    </svg>
+<div class="mb-16">
+  <svg
+    class="hover:cursor-pointer"
+    (click)="backToPortalsSelection($event)"
+    style="transform: rotate(270deg)"
+    fill="#000000"
+    width="40px"
+    height="40px"
+    viewBox="0 0 36 36"
+    version="1.1"
+    preserveAspectRatio="xMidYMid meet"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    <title>arrow-line</title>
+    <path
+      d="M27.66,15.61,18,6,8.34,15.61A1,1,0,1,0,9.75,17L17,9.81V28.94a1,1,0,1,0,2,0V9.81L26.25,17a1,1,0,0,0,1.41-1.42Z"
+      class="clr-i-outline clr-i-outline-path-1"
+    ></path>
+    <rect x="0" y="0" width="36" height="36" fill-opacity="0" />
+  </svg>
+</div>
+<div class="h-full text-center lg:w-1/2 md:w-3/4 w-full mx-auto">
+  <div class="mb-20">
+    <img
+      src="https://www.gravatar.com/avatar/EMAIL_MD5?d=https%3A%2F%2Fui-avatars.com%2Fapi%2F/Teacher+Platform/128"
+      alt="avatar"
+      width="150"
+      height="150"
+      class="mx-auto"
+    />
+    <h1 class="text-2xl">Councilor Platform</h1>
+    <p class="text-sm text-gray-400">School teacher can access their account</p>
   </div>
-  <div class="text-center mb-28 mt-12">
-    <div class="text-center">
-      <img
-        src="https://www.gravatar.com/avatar/EMAIL_MD5?d=https%3A%2F%2Fui-avatars.com%2Fapi%2F/Teacher+Platform/128"
-        alt="avatar"
-        width="200"
-        height="200"
-      />
-      <h1 class="text-2xl">Coucnller Platform</h1>
-      <p class="text-sm text-gray-400">
-        School teacher can access their account
-      </p>
-    </div>
-  </div>
-  <h2 class="text-xl mb-6 text-center">Login</h2>
-  <form class="flex flex-col px-12 w-2/3 mx-auto text-center">
-    <input
-      autocomplete="on"
+  <h2 class="text-xl mb-6">Login</h2>
+  <form
+    (submit)="onSubmit()"
+    [formGroup]="loginForm"
+    class="flex flex-col gap-5"
+  >
+    <app-input
+      [required]="true"
+      autocomplete="off"
       name="email"
       id="email"
       type="email"
+      email
       placeholder="Email"
-      class="w-full h-14 border border-gray-300 p-4 outline-none mb-6 rounded-md text-xl"
+      formControlName="username"
     />
-    <input
-      autocomplete="on"
+    <app-input
+      [required]="true"
+      autocomplete="off"
       name="password"
       id="password"
-      type="password"
       placeholder="Password"
-      class="w-full h-14 border border-gray-300 p-4 outline-none mb-1 rounded-md text-xl"
+      type="password"
+      formControlName="password"
     />
-    <a href="#" class="mb-6 text-start text-sm">Forget-password</a>
+    <a href="#" class="mb-12 text-start text-sm">Forget-password?</a>
     <app-button
       buttonClass="filled-button"
       buttonType="submit"

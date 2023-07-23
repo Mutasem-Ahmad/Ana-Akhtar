@@ -12,8 +12,7 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     AccordionComponent,
     DropdownComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   exports: [
     ButtonComponent,
     InputComponent,

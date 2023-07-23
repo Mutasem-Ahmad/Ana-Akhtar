@@ -7,19 +7,21 @@ import { PortalCardComponent } from './portal-card/portal-card.component';
 import { LoginComponent } from './login/login.component';
 import { PlatformSelectionComponent } from './platform-selection/platform-selection.component';
 import { SharedModule } from 'src/components/shared.module';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     PortalSelectionComponent,
     PortalCardComponent,
     LoginComponent,
-    PlatformSelectionComponent
+    PlatformSelectionComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
-    PortalSelectionRoutingModule
-  ]
+    PortalSelectionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
 })
-export class PortalSelectionModule { }
+export class PortalSelectionModule {}

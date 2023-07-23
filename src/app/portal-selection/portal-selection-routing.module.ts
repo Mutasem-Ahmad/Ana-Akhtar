@@ -19,13 +19,8 @@ const routes: Routes = [
         component: PlatformSelectionComponent,
       },
       {
-        path: 'login',
+        path: 'login/:id',
         component: LoginComponent,
-      },
-      {
-        path: '**',
-        redirectTo: '',
-        pathMatch: 'full',
       },
     ],
   },
@@ -40,15 +35,15 @@ const routes: Routes = [
       import('../student/student.module').then((m) => m.StudentModule),
   },
   {
-    path: 'portal/guardian',
+    path: 'portal/parent',
     loadChildren: () =>
       import('../guardian/guardian.module').then((m) => m.GuardianModule),
   },
-  {
-    path: '**',
-    redirectTo: '/portal',
-    pathMatch: 'full',
-  },
+  // {
+  //   path: '**',
+  //   redirectTo: '/portal',
+  //   pathMatch: 'full',
+  // },
 ];
 
 @NgModule({
