@@ -13,6 +13,9 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MenuComponent } from './menu/menu.component';
+import { MenuItemDirective } from './menu/directives/menu-item.directive';
+import { MenuTriggerDirective } from './menu/directives/menu-trigger.directive';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CalendarComponent,
     AccordionComponent,
     DropdownComponent,
+    MenuComponent,
+    MenuItemDirective,
+    MenuTriggerDirective,
   ],
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   exports: [
@@ -43,6 +49,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CalendarComponent,
     AccordionComponent,
     DropdownComponent,
+    MenuComponent,
+    MenuItemDirective,
+    MenuTriggerDirective,
   ],
 })
 export class SharedModule {}

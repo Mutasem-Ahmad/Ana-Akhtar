@@ -1,0 +1,11 @@
+<div
+  class="relative transition duration-300 ease-out z-50"
+  [class.opacity-0]="!isOpen"
+  [class.opacity-1]="isOpen"
+>
+  <div
+    class="top-1 right-0 rtl:left-0 absolute shadow-md py-3 bg-white border border-gray-200 list-none min-w-[180px]"
+  >
+    <ng-content></ng-content>
+  </div>
+</div>
