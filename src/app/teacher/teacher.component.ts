@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./teacher.component.scss'],
 })
 export class TeacherComponent {
-  open: boolean = false;
+  open: boolean = true;
 }

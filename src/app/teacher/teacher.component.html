@@ -4,7 +4,7 @@
     <app-sidenav [(open)]="open"></app-sidenav>
     <div
       [class]="open ? 'md:ml-56' : 'ml-16'"
-      class="h-full w-full bg-gray-50 relative overflow-y-auto"
+      class="h-full w-full bg-gray-50 relative overflow-y-auto transition-width duration-300"
     >
       <main>
         <router-outlet></router-outlet>
